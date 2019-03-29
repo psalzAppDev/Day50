@@ -12,6 +12,9 @@
 		D00112AE224E5AD200E633DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D00112AC224E5AD200E633DB /* Main.storyboard */; };
 		D00112B0224E5AD300E633DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D00112AF224E5AD300E633DB /* Assets.xcassets */; };
 		D00112B3224E5AD300E633DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D00112B1224E5AD300E633DB /* LaunchScreen.storyboard */; };
+		D00112BB224E5CD000E633DB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00112BA224E5CD000E633DB /* DetailViewController.swift */; };
+		D00112BD224E5FE800E633DB /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00112BC224E5FE800E633DB /* Image.swift */; };
+		D00112BF224E691000E633DB /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00112BE224E691000E633DB /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		D00112AF224E5AD300E633DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D00112B2224E5AD300E633DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D00112B4224E5AD300E633DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D00112BA224E5CD000E633DB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		D00112BC224E5FE800E633DB /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		D00112BE224E691000E633DB /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,9 @@
 				D00112AF224E5AD300E633DB /* Assets.xcassets */,
 				D00112B1224E5AD300E633DB /* LaunchScreen.storyboard */,
 				D00112B4224E5AD300E633DB /* Info.plist */,
+				D00112BA224E5CD000E633DB /* DetailViewController.swift */,
+				D00112BC224E5FE800E633DB /* Image.swift */,
+				D00112BE224E691000E633DB /* Helper.swift */,
 			);
 			path = Day50;
 			sourceTree = "<group>";
@@ -135,6 +144,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D00112BB224E5CD000E633DB /* DetailViewController.swift in Sources */,
+				D00112BD224E5FE800E633DB /* Image.swift in Sources */,
+				D00112BF224E691000E633DB /* Helper.swift in Sources */,
 				D00112AB224E5AD200E633DB /* ViewController.swift in Sources */,
 				D00112A9224E5AD200E633DB /* AppDelegate.swift in Sources */,
 			);
