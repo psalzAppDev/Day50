@@ -21,6 +21,17 @@ class ViewController: UITableViewController,
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .camera,
                                                             target: self,
                                                             action: #selector(takePhoto))
+        
+        if let archivedData = UserDefaults.standard.object(forKey: "images") as? Data
+        {
+            let jsonDecoder = JSONDecoder()
+            
+            if let unarchivedData = try? jsonDecoder.decode([Image].self, from: archivedData)
+            {
+                images = unarchivedData
+                tableView.reloadData()
+            }
+        }
     }
 
     @objc func takePhoto()
@@ -80,6 +91,8 @@ class ViewController: UITableViewController,
             try? FileManager.default.removeItem(at: Helper.getDocumentsDirectory().appendingPathComponent(images[indexPath.row].image))
             images.remove(at: indexPath.row)
             tableView.reloadData()
+            
+            saveDataToDefaults()
         }
     }
     
@@ -112,6 +125,8 @@ class ViewController: UITableViewController,
                                             self?.images.insert(image, at: 0)
                                             self?.tableView.insertRows(at: [IndexPath(row: 0, section: 0)],
                                                                        with: .automatic)
+                                            
+                                            self?.saveDataToDefaults()
                                         }
                                    }))
         
@@ -119,7 +134,18 @@ class ViewController: UITableViewController,
         
         
         present(ac, animated: true)
-
+    }
+    
+    func saveDataToDefaults()
+    {
+        let jsonEncoder = JSONEncoder()
+        
+        if let archivedData = try? jsonEncoder.encode(images)
+        {
+            let defaults = UserDefaults.standard
+            
+            defaults.set(archivedData, forKey: "images")
+        }
     }
 }
 
